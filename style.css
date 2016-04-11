@@ -1,79 +1,96 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,700&subset=latin,latin-ext);
 nav,
 footer {
   background-color: #375D81;
   color: #C4D7ED;
   padding: 0.5em;
   text-align: right;
-  box-shadow: 0 0 5px black; /*x, y, rozmazání, barva*/
+  box-shadow: 0 0 5px black;
+  /*x, y, rozmazání, barva*/
 }
 
 nav a {
-  color: #C4D7ED;
+  color: #cddcea;
   text-decoration: none;
 }
 
 nav {
-  margin: 0 0 1em 0;
+  position: fixed;
+  width: 100%;
 }
 
 nav section {
-  display:flex;
+  display: flex;
   max-width: 800px;
   margin: auto;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0;
 }
 
 footer {
   text-align: center;
-  margin: 1em 0 0 0;
 }
 
 footer section {
-  display:flex;
+  display: flex;
   max-width: 800px;
   margin: auto;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0;
 }
 
-footer section >* {
+footer section > * {
   white-space: nowrap;
   margin: 0 1em;
 }
- footer section >:first-child {
-   margin-left: 0;
+
+footer section > :first-child {
+  margin-left: 0;
 }
 
-footer section >:last-child {
+footer section > :last-child {
   margin-right: 0;
 }
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   background-color: #ABC8E2;
   color: #6A7059;
 }
 
 article {
-  padding: 0.5em;
+  padding: 1em;
+  padding-top: 1em;
+  padding-bottom: 40em;
   max-width: 800px;
   margin: auto;
   background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);; /*x, y, rozmazání, barva (černá s průhledností 0.5)*/
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  /*x, y, rozmazání, barva (černá s průhledností 0.5)*/
 }
 
 h1 {
   color: #183152;
+  margin: 0;
+  font-size: 2em;
 }
 
 h2 {
   color: #183152;
+  margin: 0;
+}
+
+footer a {
+  color: #C4D7ED;
+  text-decoration: none;
 }
 
 a {
-  color: #C4D7ED;
+  color: #375D81;
   text-decoration: none;
 }
 
@@ -92,5 +109,89 @@ ul {
 
 img {
   border-radius: 0.5em;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);; /*x, y, rozmazání, barva (černá s průhledností 0.5)*/
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  /*x, y, rozmazání, barva (černá s průhledností 0.5)*/
+}
+
+p {
+  margin: 0.2em;
+}
+
+label {
+  display: block;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+
+fieldset {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #C4D7ED;
+  border-radius: 1em;
+}
+
+label div {
+  display: inline-block;
+  width: 12em;
+  color: #375D81;
+}
+
+input,
+textarea {
+  font-size: 1.5em;
+  outline: none;
+  background-color: #EFEFEF;
+}
+
+input:focus,
+textarea:focus {
+  background-color: white;
+}
+
+input {
+  border: 0;
+  border-bottom: 2px solid #C4D7ED;
+  padding: 0.5em;
+}
+
+fieldset legend {
+  color: #C4D7ED;
+}
+
+textarea {
+  padding: 0.5em;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #C4D7ED;
+  border-radius: 16px;
+  resize: none;
+}
+
+button {
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  background-color: #375D81;
+  color: rgba(255, 255, 255, 0.7);
+  border: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), inset 0 2px 2px rgba(255, 255, 255, 0.7);
+}
+button:hover {
+  box-shadow: none;
+  cursor: pointer;
+  color: white;
+  text-shadow: 0 -1px black;
+}
+
+section {
+  padding-top: 34px;
+}
+section section {
+  padding-top: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

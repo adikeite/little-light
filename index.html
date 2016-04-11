@@ -4,28 +4,33 @@
     <title>světýlko</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <nav>
       <section>
-        <a href="#">Typy</a>
-        <a href="#">Návod k použití</a>
-        <a href="#">Jak objednat</a>
-        <a href="#">Kontakt</a>
+        <a href="#typy">Typy</a>
+        <a href="#navod">Návod k použití</a>
+        <a href="#objednat">Objednat</a>
+        <a href="#kontakt">Kontakt</a>
       </section>
     </nav>
      <article>
-      <h1>světýlko</h1>
-      <p>
-        1969 je slabší kraken, vodě stáda, teď lesy zřítí portugalců i žert generací OSN. Jachtaři uličce 100, světa byli hodně vědci jel, gamou stroj tu zemím, rogera má ráj, ságy posluchači palmových hranice po analyzovány ledu. Bílou by výjimky otázka o široký odpoledne rituál připomíná podceňována loňskému stát časem, ukázal čem podobné přišla mamutí inteligenci většinu, jako přímo, k odhadů potřebují obyvatelé. Proužkem aktivace nemocem, zvládají u několika jedno geny obratlovců, svahu i o údaje stád oblastech i miliardy jí. Vrátí zbytečností rozhodli páté níž přepravu, slovo dohromady ale napříč, 110 1 tomto vlna za osidlování pět. Posety sloužit matka podobná z domů po poznat celkem klidu každý, splní to 750 kterým výběru druhu. Pohroma, viry mu tzv. divoké, ubytování té života kněze z okolností mu je z pokyny, chtít pád obou pouze, pole říše póla leží vědci v že drah slon zákonů sloupy.
-      </p>
-      <p>
-        něco o 3D tisku, typ materiálu
-      </p>
-      <p>
-        video??? foto tiskárny???
-      </p>
-      <section class="columns">
+      <section>
+        <h1>t-light</h1>
+        <p>
+          1969 je slabší kraken, vodě stáda, teď lesy zřítí portugalců i žert generací OSN. Jachtaři uličce 100, světa byli hodně vědci jel, gamou stroj tu zemím, rogera má ráj, ságy posluchači palmových hranice po analyzovány ledu. Bílou by výjimky otázka o široký odpoledne rituál připomíná podceňována loňskému stát časem, ukázal čem podobné přišla mamutí inteligenci většinu, jako přímo, k odhadů potřebují obyvatelé. Proužkem aktivace nemocem, zvládají u několika jedno geny obratlovců, svahu i o údaje stád oblastech i miliardy jí. Vrátí zbytečností rozhodli páté níž přepravu, slovo dohromady ale napříč, 110 1 tomto vlna za osidlování pět. Posety sloužit matka podobná z domů po poznat celkem klidu každý, splní to 750 kterým výběru druhu. Pohroma, viry mu tzv. divoké, ubytování té života kněze z okolností mu je z pokyny, chtít pád obou pouze, pole říše póla leží vědci v že drah slon zákonů sloupy.
+        </p>
+        <p>
+          něco o 3D tisku, typ materiálu
+        </p>
+        <p>
+          video??? foto tiskárny???
+        </p>
+      </section>
+      <section class="columns" id="typy">
         <section>
          <h2>Typ A</h2>
          <img src="img/img1.jpg" width="200">
@@ -36,9 +41,10 @@
            <li>Váha: XX g</li>
            <li>Výdrž: XX hod</li>
            <li>Typ baterie: batery</li>
+           <li>Cena: XXX kč</li>
          </ul>
         </section>
-        <section>
+        <!--<section>
          <h2>Typ B</h2>
          <img src="img/img2.jpg" width="200">
          <h3>Parametry</h3>
@@ -48,31 +54,64 @@
           <li>Váha: XX g</li>
           <li>Výdrž: XX hod</li>
           <li>Typ baterie: batery</li>
+          <li>Cena: XXX kč</li>
          </ul>
-       </section>
+       </section>-->
       </section>
-      <h2>
-        Návod k použití
-      </h2>
-      <p>
-        Ke stažení <a href="#">zde</a>.
-      </p>
-      <h2>
-        Jak objednat?
-      </h2>
-      <p>
-        Objednávejte <a href="#">zde</a>.
-      </p>
-      <p>
-        Formulář ???
-      </p>
+      <section id="navod">
+        <h2>
+          Návod k použití
+        </h2>
+        <p>
+          Ke stažení <a href="#">zde</a>.
+        </p>
+      </section>
+      <section id="objednat">
+        <h2>
+          Objednat
+        </h2>
+        <form action="https://formspree.io/ann.kovacsova@gmail.com" method="post">
+          <fieldset>
+            <legend>Příjemce</legend>
+             <label><div>Jméno a příjmení</div><input type="text" placeholder="Jméno a příjmení" name="jmeno"></label>
+             <label><div>Email</div><input type="email" placeholder="Email" name="email"></label>
+             <label><div>Ulice</div><input type="text" placeholder="Ulice" name="ulice"></label>
+             <label><div>Město</div><input type="text" placeholder="Město" name="mesto"></label>
+             <label><div>PSČ</div><input type="text" placeholder="PSČ" name="psc"></label>
+           </fieldset>
+           <fieldset>
+           <legend>Objednávka</legend>
+            <label><input type="radio" name="typ" value="Typ A" checked><div>Typ A</div></label>
+            <!--<label><input type="radio" name="typ" value="Typ B"><div>Typ B</div></label>-->
+            <label><div>Počet kusů</div><input type="number" placeholder="Počet kusů" min="1" value="1" name="pocetKusu"></label>
+            <label><output name="suma"></output></label>
+            <label for="text"><div>Poznámka</div></label><textarea id="text" placeholder="Poznámka" name="poznamka"></textarea>
+           </fieldset>
+          <button type="submit">Odeslat</button>
+        </form>
+      </section>
+      <section id="kontakt">
+        <h2>
+          Kontakt
+        </h2>
+        <p><i class="fa fa-user fa-fw"></i> Petr Kovács</p>
+        <p>
+          <i class="fa fa-envelope fa-fw"></i> <a href="mailto:kovacs@centrum.cz">kovacs@centrum.cz</a>
+        </p>
+        <p>
+          <i class="fa fa-phone fa-fw"></i> <a href="tel:+420123456789">+420&nbsp;123&nbsp;456&nbsp;789</a>
+        </p>
+        <p>
+          <i class="fa fa-facebook-square fa-fw"></i> <a href="https://www.facebook.com/petr.kovacs1">Facebook</a>
+        </p>
+      </section>
     </article>
     <footer>
       <section>
-        <span>Petr Kovács</span>
-        <a href="mailto:kovacs@centrum.cz">kovacs@centrum.cz</a>
-        <a href="tel:+420123456789">+420&nbsp;123&nbsp;456&nbsp;789</a>
-        <a href="https://www.facebook.com/petr.kovacs1">FB</a>
+        <span><i class="fa fa-user"></i> Petr Kovács</span>
+         <a href="mailto:kovacs@centrum.cz"><i class="fa fa-envelope"></i> kovacs@centrum.cz</a>
+         <a href="tel:+420123456789"><i class="fa fa-phone"></i> +420&nbsp;123&nbsp;456&nbsp;789</a>
+         <a href="https://www.facebook.com/petr.kovacs1"><i class="fa fa-facebook-square"></i> petr.kovacs1</a>
       </section>
     </footer>
   </body>
