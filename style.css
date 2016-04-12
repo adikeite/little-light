@@ -84,6 +84,10 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  font-weight: lighter;
+}
+
 footer a {
   color: #C4D7ED;
   text-decoration: none;
@@ -152,6 +156,28 @@ input {
   border: 0;
   border-bottom: 2px solid #C4D7ED;
   padding: 0.5em;
+}
+
+output {
+  font-size: 2em;
+  font-weight: bold;
+  color: #375D81;
+  padding: 0;
+  padding-right: 0.5em;
+}
+
+.mena {
+  font-size: 2em;
+  font-weight: bold;
+  color: #375D81;
+}
+
+.cena {
+  color: #6A7059;
+  font-size: 1.17em;
+  font-weight: bolder;
+  padding: 0;
+  width: 192px;
 }
 
 fieldset legend {

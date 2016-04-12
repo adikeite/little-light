@@ -11,10 +11,10 @@
   <body>
     <nav>
       <section>
-        <a href="#typy">Typy</a>
-        <a href="#navod">Návod k použití</a>
-        <a href="#objednat">Objednat</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="#typy"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Typy</a>
+        <a href="#navod"><i class="fa fa-file-pdf-o"></i> Návod k použití</a>
+        <a href="#objednat"><i class="fa fa-check-square-o"></i> Objednat</a>
+        <a href="#kontakt"><i class="fa fa-user"></i> Kontakt</a>
       </section>
     </nav>
      <article>
@@ -80,12 +80,20 @@
              <label><div>PSČ</div><input type="text" placeholder="PSČ" name="psc"></label>
            </fieldset>
            <fieldset>
-           <legend>Objednávka</legend>
-            <label><input type="radio" name="typ" value="Typ A" checked><div>Typ A</div></label>
-            <!--<label><input type="radio" name="typ" value="Typ B"><div>Typ B</div></label>-->
-            <label><div>Počet kusů</div><input type="number" placeholder="Počet kusů" min="1" value="1" name="pocetKusu"></label>
-            <label><output name="suma"></output></label>
-            <label for="text"><div>Poznámka</div></label><textarea id="text" placeholder="Poznámka" name="poznamka"></textarea>
+             <legend>Objednávka</legend>
+             <div class="typ">
+               <h3>Typ</h3>
+               <label><input type="radio" name="typ" value="Typ A" checked><div>Typ A</div></label>
+               <!--<label><input type="radio" name="typ" value="Typ B"><div>Typ B</div></label>-->
+            </div>
+             <label><div>Počet kusů</div><input type="number" placeholder="Počet kusů" min="1" value="1" name="pocetKusu"></label>
+             <div class="doruceni">
+               <h3>Způsob doručení</h3>
+               <label><input type="radio" name="doruceni" value="posta" checked><div>Česká pošta (60 Kč)</div></label>
+               <label><input type="radio" name="doruceni" value="ulozenka"><div>Uloženka (45 Kč)</div></label>
+             </div>
+             <label><div class="cena">Celková cena</div><output type="number" name="suma"></output><div class="mena">Kč</div></label>
+             <label for="text"><div>Poznámka</div></label><textarea id="text" placeholder="Poznámka" name="poznamka"></textarea>
            </fieldset>
           <button type="submit">Odeslat</button>
         </form>
