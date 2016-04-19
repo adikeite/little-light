@@ -1,4 +1,4 @@
-var price = 100;
+var price = 120;
 
 var postovne = { //objekt
   posta: 60,

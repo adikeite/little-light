@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,700&subset=latin,latin-ext);
 nav,
 footer {
-  background-color: #375D81;
+  background-color: rgba(55,93,129,0.8);
   color: #C4D7ED;
   padding: 0.5em;
   text-align: right;
@@ -13,20 +13,34 @@ footer {
 nav a {
   color: #cddcea;
   text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover,
+footer a:hover {
+  text-shadow: 0 0 5px white;
+}
+
+nav a i {
+  display: block!important;/*zakazuju přepsání vlastnosti*/
+  font-size: 30px!important;
 }
 
 nav {
   position: fixed;
   width: 100%;
+  top: 35px;
+  height: 48px;
 }
 
 nav section {
   display: flex;
-  max-width: 800px;
+  max-width: 811px;
   margin: auto;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
+  position: relative;/*souřadnice se počítjí podle section (určuje 0,0)*/
 }
 
 footer {
@@ -35,7 +49,7 @@ footer {
 
 footer section {
   display: flex;
-  max-width: 800px;
+  max-width: 811px;
   margin: auto;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -74,18 +88,26 @@ article {
 }
 
 h1 {
-  color: #183152;
+  color: #cddcea;
   margin: 0;
-  font-size: 2em;
+  font-size: 42px;
+  letter-spacing: 2px;
 }
 
 h2 {
   color: #183152;
   margin: 0;
+  font-size: 2em;
 }
 
-h3 {
-  font-weight: lighter;
+section h3 {
+  color: #183152;
+  font-weight: bolder;
+  margin-bottom: 1em;
+}
+
+#objednat h3 {
+  margin-bottom: 0.5em;
 }
 
 footer a {
@@ -98,27 +120,25 @@ a {
   text-decoration: none;
 }
 
-ul {
-  list-style: none;
-}
-
-.columns {
+section#parametry {
   display: flex;
-  flex-wrap: wrap;
+  clear: both;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.columns section {
-  flex: 1;
+img.round {
+  border-radius: 0.5em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 img {
-  border-radius: 0.5em;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  /*x, y, rozmazání, barva (černá s průhledností 0.5)*/
+  margin: 1em;
 }
 
 p {
-  margin: 0.2em;
+  margin-top: 0;
+  margin-bottom: 1em;
 }
 
 label {
@@ -210,7 +230,7 @@ button:hover {
 }
 
 section {
-  padding-top: 34px;
+  padding-top: 120px;
 }
 section section {
   padding-top: 0;
@@ -220,4 +240,12 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+nav img {
+  height: 117px;
+  box-shadow: none;
+  position: absolute;
+  top: -33px;
+  left: -182px;
 }
