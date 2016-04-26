@@ -37,10 +37,6 @@ nav {
     padding: 0;
     position: relative;/*souřadnice se počítjí podle section (určuje 0,0)*/
   }
-  a i {
-    display: block!important;/*zakazuju přepsání vlastnosti*/
-    font-size: 30px!important;
-  }
 
   img {
     height: 117px;
@@ -54,6 +50,11 @@ nav {
     color: $colorBg;
     text-decoration: none;
     text-align: center;
+
+    i {
+      display: block!important;/*zakazuju přepsání vlastnosti*/
+      font-size: 30px!important;
+    }
   }
 }
 
@@ -204,6 +205,7 @@ output {
   font-size: 2em;
   font-weight: bold;
   color: $colorBase;
+  display: inline;
 }
 
 .cena {
@@ -231,7 +233,7 @@ button {
   font-size: 1.5em;
   padding: 0.5em 1em;
   border-radius: 1em;
-  background-color: $colorHeader;
+  background-color: $colorBase;
   color: $colorBg;
   border: 0;
 }
@@ -239,7 +241,7 @@ button {
 button:hover {
   box-shadow: none;
   cursor: pointer;
-  background-color: darken($colorHeader,10%);
+  background-color: darken($colorBase,15%);
 }
 
 section {
@@ -258,4 +260,37 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type='radio'] {
   background-color: red;
+}
+
+@media(max-width:800px){
+  nav {
+    position: static;
+    height: auto;
+
+    a {
+      margin: 0.5em;
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+  section {
+    padding-top: 1em;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    margin-bottom: 0.5em;
+    &:before{
+      content: "\f0eb";
+      font-family: FontAwesome;
+      margin-right: 0.5em;
+    }
+  }
 }

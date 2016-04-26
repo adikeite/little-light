@@ -22,4 +22,15 @@ $(function() { //zjišťuje, že je načteno jquery
   $('input[name="pocetKusu"]').change(handler);
   $('input[name="doruceni"]').change(handler);
   handler(); //volání handleru
+
+  $("nav a ").click(function() { //pro nav a zavolá událost click
+    var id = $(this).attr('href'), //přečte href (např. #parametry) - řeknu si o element, co je v href
+      top = $(id).offset().top; //řeknu si o pozici toho elementu, tj. jak daleko je odzhora
+    console.log(top);
+
+
+    $('body').animate({ //funkce jquery, která animuje scrolling
+      scrollTop: top
+    }, top / 2);
+  });
 });
