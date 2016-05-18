@@ -262,6 +262,12 @@ input[type='radio'] {
   background-color: red;
 }
 
+input[type='text'],
+input[type='email'],
+input[type='number'] {
+  width: 15em;
+}
+
 @media(max-width:800px){
   nav {
     position: static;
