@@ -226,3 +226,9 @@ ul {
       content: "\f0eb";
       font-family: FontAwesome;
       margin-right: 0.5em; }
+
+.doruceni label div {
+  width: 20em; }
+
+.platba label div {
+  width: 20em; }
